@@ -1,3 +1,5 @@
+// ignore_for_file: use_build_context_synchronously, avoid_print, duplicate_ignore, unnecessary_brace_in_string_interps
+
 import 'package:flutter/material.dart';
 import 'package:flutter_appauth/flutter_appauth.dart';
 
@@ -53,12 +55,14 @@ class _MyHomePageState extends State<MyHomePage> {
       // print(r?.authorizationAdditionalParameters);
       idToken = r?.idToken;
       // print(r?.authorizationAdditionalParameters);
+      // ignore: avoid_print
       print(r?.idToken);
       // print(r?.accessTokenExpirationDateTime);
       // print(r?.tokenType);
       // print(r?.refreshToken);
       // print(r?.scopes);
       var token = r?.accessToken;
+      // ignore: avoid_print
       print(r?.tokenAdditionalParameters);
       var snackBar = SnackBar(
         content: Text('Token  : ${token != null ? "YES" : "NO"}'),
